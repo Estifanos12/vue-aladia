@@ -8,7 +8,7 @@ useHead({
 
 const overlayRef = useTemplateRef("overlay-ref");
 
-const handleClick = (e) => {
+const handleClick = (e: Event) => {
   if (e.target === overlayRef.value) {
     modalStore.showModal = false;
     resetUserStore();
