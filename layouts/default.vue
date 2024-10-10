@@ -6,10 +6,10 @@ useHead({
   title: "Aladia",
 });
 
-const overlayRef = useTemplateRef("overlay-ref");
+const containerRef = useTemplateRef("containerRef");
 
 const handleClick = (e: Event) => {
-  if (e.target === overlayRef.value) {
+  if (e.target === containerRef.value?.overlayRef) {
     modalStore.showModal = false;
     resetUserStore();
   }
@@ -22,20 +22,19 @@ const handleClick = (e: Event) => {
     <slot />
 
     <Transition>
-      <div
-        class="absolute top-0 left-0 w-full h-full z-[999] grid place-items-center bg-black/30 backdrop-blur-lg"
+      <AtomicOverlay
         v-if="modalStore.showModal"
-        @click="handleClick"
-        ref="overlay-ref"
+        :handleClick="handleClick"
+        ref="containerRef"
       >
-        <div ref="modal-ref">
+        <div>
           <MoleculesJoinUs v-if="!userStore.email.value" />
           <MoleculesPasswordRecovery
             v-else-if="userStore.email.value === 'michael12gashaw@gmail.com'"
           />
           <MoleculesSignUp v-else />
         </div>
-      </div>
+      </AtomicOverlay>
     </Transition>
   </div>
 </template>
