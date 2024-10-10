@@ -187,23 +187,15 @@ function handleSignup() {
             </div>
           </div>
           <div class="mb-4 flex items-center gap-2" bis_skin_checked="1">
-            <div
-              class="flex h-4 w-4 cursor-pointer items-center justify-center rounded border pt-0.5 transition-all border-white/50 hover:border-white"
-              bis_skin_checked="1"
-            >
-              <i
-                @click="
-                  () => {
-                    checked = !checked;
-                    userStore.agreeTerms.hasError =
-                      !userStore.agreeTerms.hasError;
-                    userStore.agreeTerms.value = checked;
-                  }
-                "
-                class="fa-solid fa-check text-sm"
-                :class="checked ? 'text-white' : 'text-black/50'"
-              ></i>
-            </div>
+            <AtomicCheckbox
+              :checked="checked"
+              :handleClick="
+                () => {
+                  checked = !checked;
+                  userStore.agreeTerms.value = checked;
+                }
+              "
+            />
             <div
               :class="
                 userStore.agreeTerms.hasError ? 'text-red-500' : 'text-white'
