@@ -1,11 +1,14 @@
 <script setup lang="ts">
-defineProps({
-  type: String,
-  placeholder: String,
-  iconClass: String,
-  errorMsg: String,
-  hasError: Boolean,
-});
+interface InputProps {
+  type: string;
+  placeholder: string;
+  iconClass?: string;
+  errorMsg?: string;
+  hasError?: boolean;
+}
+
+const { errorMsg, hasError, placeholder, iconClass, type } =
+  defineProps<InputProps>();
 
 const emit = defineEmits(["response"]);
 const input = ref("");

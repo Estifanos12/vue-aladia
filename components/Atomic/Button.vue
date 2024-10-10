@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { userStore } from "~/store/store";
-
 interface ButtonProps {
   variant: "primary" | "secondary" | "golden";
   label: string;
