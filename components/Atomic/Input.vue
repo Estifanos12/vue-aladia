@@ -32,7 +32,7 @@ watch(input, () => {
       class="flex w-10 items-center justify-center text-xl"
       bis_skin_checked="1"
     >
-      <i :class="iconClass"></i>
+      <i v-if="iconClass" :class="iconClass"></i>
     </div>
     <input
       :type="type === 'password' && showPassword ? 'text' : type"
