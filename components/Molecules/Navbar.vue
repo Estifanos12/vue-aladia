@@ -43,15 +43,19 @@ const handleModal = () => {
               data-v-2f5a6ce3=""
             ></i>
           </div>
-          <input
+          <AtomicInput
+            type="search"
             value=""
             maxlength="100"
             role="presentation"
             autocomplete="new-password"
-            class="h-full w-0 flex-1 bg-transparent text-13 outline-none"
+            className="h-full w-0 flex-1 bg-transparent text-13 outline-none"
             placeholder="Search courses..."
             data-v-2f5a6ce3=""
           />
+          <!-- <input
+            
+          /> -->
           <div
             class="relative z-20 shrink-0 cursor-pointer text-sm text-[#707070] hover:text-[#ffffff]"
             data-v-2f5a6ce3=""

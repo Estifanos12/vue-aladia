@@ -5,13 +5,18 @@ interface InputProps {
   iconClass?: string;
   errorMsg?: string;
   hasError?: boolean;
+  className?: string;
 }
 
-const { errorMsg, hasError, placeholder, iconClass, type } =
+const { className, errorMsg, hasError, placeholder, iconClass, type } =
   defineProps<InputProps>();
 
 const emit = defineEmits(["response"]);
 const input = ref("");
+const inputClassName = ref(
+  className ||
+    "group relative mb-8 flex h-10 w-full rounded transition-all bg-white"
+);
 const showPassword = ref(false);
 
 watch(input, () => {
@@ -21,10 +26,9 @@ watch(input, () => {
 
 <template>
   <div
-    class="group relative mb-8 flex h-10 w-full rounded transition-all bg-white"
-    :class="{
-      'outline outline-2 outline-red-600': hasError,
-    }"
+    :class="
+      hasError ? `${inputClassName} border border-red-500` : inputClassName
+    "
     bis_skin_checked="1"
   >
     <!---->
