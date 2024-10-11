@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@nuxtjs/storybook";
+import { mergeConfig } from "vite";
 
 const config: StorybookConfig = {
   stories: [
@@ -16,6 +17,19 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
+  },
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      optimizeDeps: {
+        include: ["jsdoc-type-pratt-parser"],
+      },
+      // Ensure proper resolution of dependencies
+      resolve: {
+        alias: {
+          "jsdoc-type-pratt-parser": require.resolve("jsdoc-type-pratt-parser"),
+        },
+      },
+    });
   },
 };
 export default config;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface ButtonProps {
-  variant: "primary" | "secondary" | "golden";
+  variant: "primary" | "golden";
   label: string;
   onClick?: () => void;
   iconClass?: string;
@@ -13,7 +13,7 @@ const props = defineProps<ButtonProps>();
   <!-- primary button -->
   <div
     data-v-2e6163a4=""
-    class="relative flex h-10 w-full items-center text-white justify-center overflow-hidden rounded-md border border-white/0 bg-black text-center text-sm mb-6"
+    class="relative flex h-10 w-full px-3 items-center text-white justify-center overflow-hidden rounded-md border border-white/0 bg-black text-center text-sm mb-6"
     bis_skin_checked="1"
     role="button"
     :class="{
@@ -28,8 +28,8 @@ const props = defineProps<ButtonProps>();
       class="gradient absolute inset-0"
       bis_skin_checked="1"
     ></div>
-    <div data-v-2e6163a4="" bis_skin_checked="1">{{ props.label }}</div>
-  </div>
+    <i data-v-df211d4a="" v-if="props.iconClass" :class="props.iconClass" class="me-2"></i> <div data-v-2e6163a4="" bis_skin_checked="1">{{ props.label }}</div> 
+    </div>
 
   <!-- golden button -->
   <div
@@ -55,7 +55,7 @@ const props = defineProps<ButtonProps>();
       class="relative text-white z-10 flex items-center justify-center gap-2 group-hover:text-black"
       bis_skin_checked="1"
     >
-      <i data-v-df211d4a="" :class="props.iconClass"></i> {{ props.label }}
+      <i data-v-df211d4a="" v-if="props.iconClass" :class="props.iconClass"></i> {{ props.label }}
     </div>
   </div>
 </template>

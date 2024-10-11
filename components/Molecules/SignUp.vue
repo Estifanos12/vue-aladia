@@ -72,7 +72,7 @@ function handleSignup() {
 
 <template>
   <div
-    class="relative -mt-20 flex h-full md:h-[40rem] w-[350px] md:w-[26rem] flex-col rounded-md border border-white/10 bg-black/50 opacity-0 backdrop-blur transition-all duration-300"
+    class="relative -mt-20 flex h-full md:h-[40rem] w-[350px] md:w-[26rem] flex-col rounded-md border border-white/10 bg-black opacity-0 backdrop-blur transition-all duration-300"
     bis_skin_checked="1"
     style="margin-top: 0px; opacity: 1"
   >

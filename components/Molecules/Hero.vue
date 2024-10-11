@@ -4,7 +4,6 @@
     class="relative min-h-screen bg-black/95 pt-14 transition-all duration-200"
     bis_skin_checked="1"
   >
-    <!--[--><!--[--><!--[--><!----><!--]-->
     <div class="relative h-[36rem] overflow-hidden" bis_skin_checked="1">
       <div
         class="z-1 relative flex items-center px-10 pt-40 text-white"
@@ -33,6 +32,5 @@
         <div class="h-80 flex-1 rounded bg-black" bis_skin_checked="1"></div>
       </div>
     </div>
-    <!--]--><!--]-->
   </div>
 </template>

@@ -4,7 +4,7 @@ import { resetUserStore, userStore } from "~/store/store";
 
 <template>
   <div
-    class="relative -mt-20 flex h-full md:h-[40rem] w-[350px] md:w-[26rem] flex-col rounded-md border border-white/10 bg-black/50 opacity-0 backdrop-blur transition-all duration-300"
+    class="relative -mt-20 flex h-full md:h-[40rem] w-[350px] md:w-[26rem] flex-col rounded-md border border-white/10 bg-black opacity-0 backdrop-blur transition-all duration-300"
     bis_skin_checked="1"
     style="margin-top: 0px; opacity: 1"
   >
@@ -57,7 +57,7 @@ import { resetUserStore, userStore } from "~/store/store";
           bis_skin_checked="1"
         >
           <div class="flex w-32 justify-center" bis_skin_checked="1">
-            <img src="/google.svg" class="h-20 w-20 object-contain" />
+            <img src="~/public/google.svg" class="h-20 w-20 object-contain" />
           </div>
           <div class="flex-1 text-white" bis_skin_checked="1">
             <div class="mb-2 text-base font-semibold" bis_skin_checked="1">

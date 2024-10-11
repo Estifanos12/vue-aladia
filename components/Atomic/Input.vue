@@ -13,10 +13,11 @@ const { className, errorMsg, hasError, placeholder, iconClass, type } =
 
 const emit = defineEmits(["response"]);
 const input = ref("");
-const inputClassName = ref(
-  className ||
-    "group relative mb-8 flex h-10 w-full rounded transition-all bg-white"
-);
+const inputClassName = computed(() => {
+  return className
+    ? `group relative flex w-full ${className}`
+    : "group relative mb-8 flex h-10 w-full rounded transition-all bg-white text-black";
+});
 const showPassword = ref(false);
 
 watch(input, () => {
@@ -31,16 +32,18 @@ watch(input, () => {
     "
     bis_skin_checked="1"
   >
-    <!---->
+    <!----> 
     <div
+      v-if="iconClass"
       class="flex w-10 items-center justify-center text-xl"
       bis_skin_checked="1"
     >
-      <i v-if="iconClass" :class="iconClass"></i>
+      <i :class="iconClass"></i>
     </div>
     <input
       :type="type === 'password' && showPassword ? 'text' : type"
-      class="h-full flex-1 w-full rounded bg-transparent text-sm text-black focus:outline-none transition-all"
+      class="h-full flex-1 w-full rounded bg-transparent text-sm focus:outline-none transition-all"
+      :class="iconClass ? '' : 'pl-3'"
       autocomplete="off"
       v-model="input"
       :placeholder="placeholder"

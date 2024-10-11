@@ -15,22 +15,23 @@
     "@nuxtjs/storybook": "^8.3.1",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "nuxt": "^3.13.0",
+    "vite": "^5.4.8",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@nuxtjs/storybook": "7.0.2",
-    "@storybook-vue/nuxt": "0.2.6",
-    "@storybook/addon-essentials": "8.0.8",
-    "@storybook/addon-interactions": "8.0.8",
-    "@storybook/addon-links": "8.0.8",
-    "@storybook/blocks": "8.0.8",
-    "@storybook/builder-vite": "8.0.8",
-    "@storybook/test": "8.0.8",
-    "@storybook/vue3": "8.0.8",
+    "@nuxtjs/tailwindcss": "^6.10.0",
+    "@storybook/addon-essentials": "8.3.5",
+    "@storybook/addon-interactions": "8.3.5",
+    "@storybook/addon-links": "8.3.5",
+    "@storybook/blocks": "8.3.5",
+    "@storybook/builder-vite": "8.3.5",
+    "@storybook/testing-library": "^0.2.0",
+    "@storybook/vue3": "8.3.5",
     "@types/node": "^18.17.5",
-    "storybook": "8.0.8",
-    "@nuxtjs/tailwindcss": "^6.10.0"
+    "storybook": "8.3.5",
+    "storybook-addon-vue-slots": "^0.9.30-next.2"
   },
   "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4"
 }

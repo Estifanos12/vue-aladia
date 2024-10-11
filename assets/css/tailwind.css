@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .bg-gradient-top {
+    background: transparent
+      linear-gradient(90deg, transparent, #fff 50%, transparent) 0 0 no-repeat
+      padding-box;
+  }
+  .gradient[data-v-df211d4a] {
+    background: transparent
+      linear-gradient(
+        134deg,
+        #bf953f,
+        #fcf6ba 22%,
+        #b38738 52%,
+        #fbf6b7 79%,
+        #aa771c
+      )
+      0 0 no-repeat padding-box;
+  }
+}

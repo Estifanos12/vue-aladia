@@ -49,7 +49,7 @@ const handleModal = () => {
             maxlength="100"
             role="presentation"
             autocomplete="new-password"
-            className="h-full w-0 flex-1 bg-transparent text-13 outline-none"
+            className="h-full w-0 flex-1 bg-transparent text-13 outline-none text-white"
             placeholder="Search courses..."
             data-v-2f5a6ce3=""
           />
@@ -124,23 +124,3 @@ const handleModal = () => {
     </div>
   </div>
 </template>
-
-<style>
-.bg-gradient-top {
-  background: transparent
-    linear-gradient(90deg, transparent, #fff 50%, transparent) 0 0 no-repeat
-    padding-box;
-}
-.gradient[data-v-df211d4a] {
-  background: transparent
-    linear-gradient(
-      134deg,
-      #bf953f,
-      #fcf6ba 22%,
-      #b38738 52%,
-      #fbf6b7 79%,
-      #aa771c
-    )
-    0 0 no-repeat padding-box;
-}
-</style>
