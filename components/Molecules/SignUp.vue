@@ -72,7 +72,7 @@ function handleSignup() {
 
 <template>
   <div
-    class="relative -mt-20 flex h-full md:h-[40rem] w-[350px] md:w-[26rem] flex-col rounded-md border border-white/10 bg-black opacity-0 backdrop-blur transition-all duration-300"
+    class="relative -mt-20 flex h-full md:h-[42rem] w-[350px] md:w-[26rem] flex-col rounded-md border border-white/10 bg-black opacity-0 backdrop-blur transition-all duration-300"
     bis_skin_checked="1"
     style="margin-top: 0px; opacity: 1"
   >
@@ -198,7 +198,7 @@ function handleSignup() {
             />
             <div
               :class="
-                userStore.agreeTerms.hasError ? 'text-red-500' : 'text-white'
+                userStore.agreeTerms.hasError ? 'text-red-500' : 'text-white text-sm'
               "
               bis_skin_checked="1"
             >
@@ -316,6 +316,7 @@ function handleSignup() {
           <AtomicButton
             variant="primary"
             label="Enter"
+            hasBgGradient
             :onClick="handleSignup"
             :hasError="
               userStore.name.hasError ||

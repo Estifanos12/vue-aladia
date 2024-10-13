@@ -1,12 +1,114 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 
-# Color Scheme
+<Meta title="Design System/Color Schema" />
 
-The following color scheme is used across the components and layouts in this project. These colors define the look and feel of the application:
+# Color Palette
+How our application is expressed through color.
 
-## Primary Colors
-- **Primary Color:** #3498db
-- **Secondary Color:** #2ecc71
-- **Accent Color:** #e74c3c
+## Core Palette
 
-## Usage
-These colors are applied consistently in the components and layouts to maintain a cohesive design language.
+### Core Brand
+
+Our core brand colors are the primary representation of the application. For interface elements with white text on top, use `Core Dark` to ensure accessibility.
+
+<div style={{ display: 'flex', gap: '1rem' }}>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#35A7FF', border: '2px solid #35A7FF' }} />
+    <span>Core</span>
+    <span>#35A7FF</span>
+  </div>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#1E4D6B', border: '2px solid #1E4D6B' }} />
+    <span>Core Dark</span>
+    <span>#1E4D6B</span>
+  </div>
+</div>
+
+### Background
+
+We use `Light Blue` as the primary background color and `Dark Blue` for secondary sections.
+
+<div style={{ display: 'flex', gap: '1rem' }}>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#E5F6FF', border: '2px solid #E5F6FF' }} />
+    <span>Light Blue</span>
+    <span>#E5F6FF</span>
+  </div>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#173A5E', border: '2px solid #173A5E' }} />
+    <span>Dark Blue</span>
+    <span>#173A5E</span>
+  </div>
+</div>
+
+### Typography
+
+For typography, we use `Dark Gray` and `White` for the main text and `Light Gray` for secondary information.
+
+<div style={{ display: 'flex', gap: '1rem' }}>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#1F2933', border: '2px solid #1F2933' }} />
+    <span>Dark Gray</span>
+    <span>#1F2933</span>
+  </div>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#FFFFFF', border: '2px solid #FFFFFF' }} />
+    <span>White</span>
+    <span>#FFFFFF</span>
+  </div>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#B0B2B4', border: '2px solid #B0B2B4' }} />
+    <span>Light Gray</span>
+    <span>#B0B2B4</span>
+  </div>
+</div>
+
+## Supporting Elements
+
+For UI elements that need subtle emphasis, use `Dark Gray` and `Light Gray`.
+
+<div style={{ display: 'flex', gap: '1rem' }}>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#2A303B', border: '2px solid #2A303B' }} />
+    <span>Dark Gray</span>
+    <span>#2A303B</span>
+  </div>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#B0B2B4', border: '2px solid #B0B2B4' }} />
+    <span>Light Gray</span>
+    <span>#B0B2B4</span>
+  </div>
+</div>
+
+## Additional Colors
+
+Supporting colors provide visual cues for messaging and labeling.
+
+### Labelling Colors
+
+Use these for labels such as `Live` tags.
+
+<div style={{ display: 'flex', gap: '1rem' }}>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#FF5252', border: '2px solid #FF5252' }} />
+    <span>Label</span>
+    <span>#FF5252</span>
+  </div>
+</div>
+
+### Messaging Colors
+
+Use these colors for error and alert messages in the application.
+
+<div style={{ display: 'flex', gap: '1rem' }}>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#F87171', border: '2px solid #F87171' }} />
+    <span>Error Core</span>
+    <span>#F87171</span>
+  </div>
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#FFB32B', border: '2px solid #FFB32B' }} />
+    <span>Alert Core</span>
+    <span>#FFB32B</span>
+  </div>
+</div>

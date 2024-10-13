@@ -6,6 +6,7 @@ interface ButtonProps {
   iconClass?: string;
   hasError?: boolean;
   imgSrc?: string;
+  hasBgGradient?: boolean;
 }
 const props = defineProps<ButtonProps>();
 </script>
@@ -13,7 +14,7 @@ const props = defineProps<ButtonProps>();
 <template>
   <!-- primary button -->
   <div
-    data-v-2e6163a4=""
+    :data-v-2e6163a4="`${props.hasBgGradient ? 'true' : ''}`"
     class="relative flex h-10 w-full px-3 items-center text-white justify-center overflow-hidden rounded-md border border-white/0 bg-black text-center text-sm mb-6"
     bis_skin_checked="1"
     role="button"
@@ -25,18 +26,12 @@ const props = defineProps<ButtonProps>();
     v-if="props.variant === 'primary'"
   >
     <div
-      data-v-2e6163a4=""
+      :data-v-2e6163a4="`${props.hasBgGradient ? 'true' : ''}`"
       class="gradient absolute inset-0"
       bis_skin_checked="1"
     ></div>
-    <i
-      data-v-df211d4a=""
-      v-if="props.iconClass"
-      :class="props.iconClass"
-      class="me-2"
-    ></i>
-    <div data-v-2e6163a4="" bis_skin_checked="1">{{ props.label }}</div>
-  </div>
+    <i data-v-df211d4a="" v-if="props.iconClass" :class="props.iconClass" class="me-2"></i> <div :data-v-2e6163a4="`${props.hasBgGradient ? 'true': ''}`" bis_skin_checked="1">{{ props.label }}</div> 
+    </div>
 
   <!-- golden button -->
   <div
@@ -69,12 +64,12 @@ const props = defineProps<ButtonProps>();
 
   <!-- social button -->
   <div
-    class="flex cursor-pointer items-center justify-center gap-4 rounded border border-white/20 py-1.5 shadow-[0px_3px_6px_#00000000] transition-all hover:bg-white/20 hover:shadow-[0px_3px_6px_#000000] active:scale-95"
+    class="flex cursor-pointer items-center justify-center gap-4 rounded border border-white/20 py-1.5 px-1.5 shadow-[0px_3px_6px_#00000000] transition-all hover:bg-white/20 hover:shadow-[0px_3px_6px_#000000] active:scale-95"
     bis_skin_checked="1"
     v-if="props.variant === 'social'"
   >
     <img :src="props.imgSrc" class="h-6" />
-    <div class="w-40 text-white text-sm" bis_skin_checked="1">
+    <div class="text-white text-sm" bis_skin_checked="1">
       {{ props.label }}
     </div>
   </div>
