@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import SignUp from "../components/Molecules/SignUp.vue";
+import SignUp from "../components/Organism/SignUp.vue";
 
 import {
   Default as DefaultInput,

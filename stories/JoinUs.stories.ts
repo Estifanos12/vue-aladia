@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import JoinUs from "../components/Molecules/JoinUs.vue";
+import JoinUs from "../components/Organism/JoinUs.vue";
 
 import { Default as DefaultInput } from "./Input.stories";
 import { Primary as PrimaryButton } from "./Button.stories";

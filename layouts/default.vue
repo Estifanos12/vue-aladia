@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useTemplateRef, onMounted } from "vue";
+import { useTemplateRef } from "vue";
 import { modalStore, resetUserStore, userStore } from "~/store/store";
 
 useHead({
@@ -22,19 +22,19 @@ const handleClick = (e: Event) => {
     <slot />
 
     <Transition>
-      <AtomicOverlay
+      <MoleculesOverlay
         v-if="modalStore.showModal"
         :handleClick="handleClick"
         ref="containerRef"
       >
         <div>
-          <MoleculesJoinUs v-if="!userStore.email.value" />
-          <MoleculesPasswordRecovery
+          <OrganismJoinUs v-if="!userStore.email.value" />
+          <OrganismPasswordRecovery
             v-else-if="userStore.email.value === 'michael12gashaw@gmail.com'"
           />
-          <MoleculesSignUp v-else />
+          <OrganismSignUp v-else />
         </div>
-      </AtomicOverlay>
+      </MoleculesOverlay>
     </Transition>
   </div>
 </template>

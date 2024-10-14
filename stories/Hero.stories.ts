@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import Hero from "../components/Molecules/Hero.vue"; // Adjust path accordingly
+import Hero from "../components/Organism/Hero.vue"; // Adjust path accordingly
 
 const meta = {
   title: "Components/Hero",

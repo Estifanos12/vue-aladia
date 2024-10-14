@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import PasswordRecovery from "../components/Molecules/PasswordRecovery.vue";
+import PasswordRecovery from "../components/Organism/PasswordRecovery.vue";
 
 import {
   Default as DefaultInput,
