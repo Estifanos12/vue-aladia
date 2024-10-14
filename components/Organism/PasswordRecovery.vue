@@ -103,7 +103,7 @@ import { resetUserStore, userStore } from "~/store/store";
             />
           </div>
 
-          <AtomicButton variant="primary" class="mt-auto" label="Send Link" />
+          <AtomicButton variant="primary"hasBgGradient class="mt-auto" label="Send Link" />
         </div>
       </div>
     </div>

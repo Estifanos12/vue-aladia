@@ -95,6 +95,7 @@ const handleLogin = () => {
               variant="primary"
               label="Enter"
               :hasError="userStore.email.error !== ''"
+              hasBgGradient
             />
 
             <div
@@ -134,18 +135,3 @@ const handleLogin = () => {
   </div>
 </template>
 
-<style>
-.gradient[data-v-2e6163a4] {
-  background: linear-gradient(
-    15deg,
-    #fff0 9.55%,
-    #fff0 30.28%,
-    #fff6,
-    #fff0 41.58%,
-    #fff0 59.02%,
-    #fff 67.97%,
-    #fff0 74.56%,
-    #fff
-  );
-}
-</style>
